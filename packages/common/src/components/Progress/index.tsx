@@ -1,15 +1,13 @@
-'use client';
-
 import React from 'react';
 
-type TProgress = {};
+export interface IProgress {}
 
-function Progress(props: TProgress) {
+const Progress = (props: IProgress) => {
 	return (
-		<div className="flex justify-center w-full h-full absolute bg-neutral-500/50" style={{ zIndex: 9999 }}>
-			<span className="loading loading-dots loading-lg" style={{ background: 'white' }}></span>
+		<div className="min-w-screen min-h-screen absolute">
+			<span className="loading loading-dots loading-lg"></span>
 		</div>
 	);
-}
+};
 
 export default Progress;
